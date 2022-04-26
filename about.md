@@ -8,8 +8,6 @@ image:
   feature: soft-trees.jpg
 ---
 
-A blog for my notes so I don't have to rely on my awful memory. Along the way I am hoping it also helps others.
-
 ### Who am I
 * Husband, dad, brother, son, friend.
 * Software Engineer with 15+ years experience
