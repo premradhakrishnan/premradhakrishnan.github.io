@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 permalink: /about/index.html
 title: Hello World
 description: It took me a while to really appreciate the simple "Hello World" text. 
