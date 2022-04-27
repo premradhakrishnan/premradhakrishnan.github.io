@@ -7,7 +7,15 @@
   {% if page.image.feature contains 'https://' | escape or page.image.feature contains 'http://' | escape %}
   <div class="featured-image" style="background-image: url({{ page.image.feature }})"></div>
   {% else %}
-  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})"></div>
+  <div class="featured-image" style="background-image: url({{ site.url }}/images/{{ page.image.feature }})">
+    <header class="post-header">
+      <hgroup>
+        <h1>{{page.title}} - post.html</h1>
+        <p class="date">{{page.date | date: "%b %d, %Y" }}</p>
+        <p class="intro">{% if page.description %}{{ page.description }}{% else %}{{ page.tagline }}{% endif %}</p>
+      </hgroup>
+    </header>
+  </div>
   {% endif %}
 {% else %}
   <div class="overlay"></div>
@@ -16,13 +24,13 @@
 
 
       <article class="wrap post">
-        <header class="post-header">
+        <!-- <header class="post-header">
           <hgroup>
             <h1>{{page.title}} - post.html</h1>
             <p class="date">{{page.date | date: "%b %d, %Y" }}</p>
             <p class="intro">{% if page.description %}{{ page.description }}{% else %}{{ page.tagline }}{% endif %}</p>
           </hgroup>
-        </header>
+        </header> -->
 
         {{ content }}
 
