@@ -1,8 +1,8 @@
 # Site
-title:              Massively
-bio:                'Jekyll version of the Massively theme by HTML5UP'
-description:        "Jekyll version of the Massively theme by HTML5UP"
-locale:             en_US
+title:              Prem's Blog
+bio:                'A blog for my notes so I don't have to rely on my awful memory. Along the way I am hoping it also helps others.'
+description:        "A blog for my notes so I don't have to rely on my awful memory. Along the way I am hoping it also helps others."
+locale:             en_AU
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
@@ -17,7 +17,7 @@ instagram:          default
 github:             default
 
 # personal
-location:           Los Angeles, CA
+location:           Coffs Harbour, AU
 phone:              310-318-5555
 email:              info@default.com # change this to your email to receive free emails for your contact submissions via Slapform.com
 
