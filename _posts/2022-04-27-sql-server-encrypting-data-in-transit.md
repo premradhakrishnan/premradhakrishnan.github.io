@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Massively: The Jekyll Theme!"
-date:   2017-10-31
-excerpt: "Huge thanks to HTML5 UP for making this awesome template! Let's see what it can do"
+title:  "SQL Server - Encrypting data in transit"
+date:   2022-04-27
+excerpt: "Data in transit from SQL Server to client is not encrypted by default. Let's see how we can fix this."
 image: "/images/pic02.jpg"
 ---
 
