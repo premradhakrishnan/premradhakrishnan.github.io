@@ -8,6 +8,8 @@ image:
   feature: soft-trees.jpg
 ---
 
+Everyone is time poor. So my aim for this blog is to always keeps things as succint as possible and hence the bullets below.
+
 ### Who am I
 * Husband, dad, brother, son, friend.
 * Software Engineer with 15+ years experience
@@ -17,9 +19,9 @@ image:
 ### What do I do
 * Fullstack dev
 * Love working on data projects and scripting in Azure
-* Also love solving anagrams
+* Also love solving a-m-g-r-a-n-s-a (I mean anagrams)
 
-### Favourite quotes 
+### Lines I like 
 * "Life would be much easier if I had the source code." - Anonymous
 * "Talk is cheap. Show me the code." – Linus Torvalds
 * "First, solve the problem. Then write the code." - John Johnson
