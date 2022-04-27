@@ -1,6 +1,6 @@
 # Site
-title:              Prem's Blog
-bio:                'A blog for my notes so I don't have to rely on my awful memory. Along the way I am hoping it also helps others.'
+title:              "Prem's Blog"
+bio:                "A blog for my notes so I don't have to rely on my awful memory. Along the way I am hoping it also helps others."
 description:        "A blog for my notes so I don't have to rely on my awful memory. Along the way I am hoping it also helps others."
 locale:             en_AU
 baseurl: "" # the subpath of your site, e.g. /blog
