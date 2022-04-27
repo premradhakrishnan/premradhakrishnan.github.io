@@ -4,7 +4,6 @@ permalink: /about/index.html
 title: Hello World
 description: It took me a while to really appreciate the simple "Hello World" text. 
 tags: [about, Prem]
-
 ---
 
 Everyone is time poor. So my aim for this blog is to always keeps things as succint as possible and hence the bullets below.
