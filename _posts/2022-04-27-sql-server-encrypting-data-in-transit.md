@@ -6,16 +6,16 @@ excerpt: "Data in transit from SQL Server to client is not encrypted by default.
 image: "/images/pic02.jpg"
 ---
 
-## How to Use This Theme
-Just go ahead and read up on [how to install Jekyll](https://jekyllrb.com/). It's not too hard I promise!
+## How to encrypt SQL Server data in transit
+1. Set a publicly trusted certificate on the SQL Server Instance
+2. Choose either Option A or Option B below
+    - Option A (Recommended)
+        - Set Force Encryption to No in SQL Server Configuration Manager
+        - Update client connections to use the "Encrypt=true" flag
+    - Option B
+        - Set Force Encryption to Yes in SQL Server Configuration Manager. No other steps required.
 
-Download this repository [here](https://github.com/iwiedenm/jekyll-theme-massively) and save it to any folder you want.
-
-Open a terminal window or a command line and ```cd``` to that location.
-
-Then enter: ```bundle exec jekyll serve```. You can now access your new Jekyll site from [http://127.0.0.1:4000/](http://127.0.0.1:4000/). Have fun exploring your new site!
-
-## Features
+<!-- ## Features
 ### Auto-Generating Sitemap
 The sitemap is auto generated! Just simply change the front matter of each site. It looks like so...
 ```
@@ -25,4 +25,4 @@ sitemap:
     changefreq: weekly
 ```
 ### Formspring integration
-The contact form below each page on the footer actually collects information! Just change your email address in the ```_config.yml``` file!
+The contact form below each page on the footer actually collects information! Just change your email address in the ```_config.yml``` file! -->
