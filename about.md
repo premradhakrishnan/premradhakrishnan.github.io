@@ -7,6 +7,8 @@ sitemap:
     lastmod: 2022-04-29
     changefreq: weekly
 ---
+## For the curious.. A bit about me
+
 <span class="image left"><img src="{{ "/images/pic04.jpg" | absolute_url }}" alt="" /></span>
 
 ### Who am I
