@@ -9,7 +9,7 @@ sitemap:
 ---
 ## For the curious.. A bit about me
 
-![image](/images/pic04.jpg){: style="float: left"}
+![image](/images/pic04.jpg){: style="float: left; margin-right: 4em; width=344px;"}
 
 ### Who am I
 * Husband, dad, brother, son, friend.
@@ -22,7 +22,7 @@ sitemap:
 * Love working on data projects and scripting in Azure
 * Also love solving a-m-g-r-a-n-s-a (I mean anagrams)
 
-![image](/images/pic05.jpg){: style="float: left"}
+![image](/images/pic05.jpg){: style="float: left; margin-right: 4em; width=344px;"}
 
 ### Lines I like 
 * "Life would be much easier if I had the source code." - Anonymous
