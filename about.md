@@ -14,7 +14,7 @@ sitemap:
 ### Who am I
 * Husband, dad, brother, son, friend.
 * Software Engineer with 15+ years experience
-* [Solution Architect at SSW](https://www.ssw.com.au/people/prem-radhakrishnan)
+* [Solution Architect at SSW](https://www.ssw.com.au/people/prem-radhakrishnan) and [SSW TV](https://tv.ssw.com)
 * Work remotely from Coffs Harbour 
 
 ### What do I do
