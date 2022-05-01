@@ -23,7 +23,7 @@ sitemap:
 * Also love solving a-m-g-r-a-n-s-a (I mean anagrams)
 
 ### My Videos
-[![YouTube - Transform Your Power BI Dashboard](/images/video-power-bi.png)](https://www.youtube.com/watch?v=eJ6uHwaGJRM "Transform Your Power BI Dashboard")
+[![YouTube - Transform Your Power BI Dashboard](/images/video-power-bi.jpg)](https://www.youtube.com/watch?v=eJ6uHwaGJRM "Transform Your Power BI Dashboard")
 <!-- ![image](/images/pic05.jpg){: style="float: left; margin-right: 4em; width=344px;"} -->
 
 ### Lines I like 
