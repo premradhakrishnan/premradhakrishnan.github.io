@@ -13,7 +13,7 @@ $(document).ready(function() {
             $(this).click(function() { return true; }); 
             $(this).attr({
                 target: "_blank",
-                title: "Opens in a new window"
+                //title: "Opens in a new window"
             });
             $(this).click();
        }
