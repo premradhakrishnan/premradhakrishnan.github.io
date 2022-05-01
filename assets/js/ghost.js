@@ -1,3 +1,5 @@
+// https://github.com/shockey/ghost-external-links/blob/master/ghost-external-links.js
+
 $(document).ready(function() {
     $("a[href^=http]").each(function(){
        var excluded = [
