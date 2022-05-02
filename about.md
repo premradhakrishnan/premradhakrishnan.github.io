@@ -23,8 +23,11 @@ sitemap:
 * Also love solving a-m-g-r-a-n-s-a (I mean anagrams)
 
 ### My Videos
-[![YouTube - Transform Your Power BI Dashboard](/images/video-power-bi.jpg)](https://www.youtube.com/watch?v=eJ6uHwaGJRM "Transform Your Power BI Dashboard")
-<!-- ![image](/images/pic05.jpg){: style="float: left; margin-right: 4em; width=344px;"} -->
+[![YouTube - Azure Real-time Analytics](file:///D:/Repos/Prem/blog/premradhakrishnan.github.io/images/video-real-time-analytics.jpg)](https://www.youtube.com/watch?v=j6vya4e6bBg "Azure Real-time Analytics")  
+<em>Figure: YoutTube | Azure Real-time Analytics</em>
+
+[![YouTube - Transform Your Power BI Dashboard](file:///D:/Repos/Prem/blog/premradhakrishnan.github.io/images/video-power-bi.jpg)](https://www.youtube.com/watch?v=eJ6uHwaGJRM "Transform Your Power BI Dashboard")  
+<em>Figure: YoutTube | Transform Your Power BI Dashboard</em>
 
 ### Lines I like 
 * "Life would be much easier if I had the source code." - Anonymous
@@ -59,19 +62,4 @@ That's enough about me. Let's get to work!
 
 ^ Prem -->
 
-<!-- ## About our Site
 
-Making steady content and conveying it well takes a great deal of research and, hence, time and exertion. Building a profound established comprehension of your target customer needs is critical as your principle objective ought to be to fulfill their requirements as awesome content. You should need to enhance their lives. Having significant content like this may not be simple by any methods. Be that as it may, in any case, it's a fundamental apparatus in the event that you expect to grow a fruitful and supportable business in the present web focused world.
-
-Receiving the benefits of content is a certain something. Be that as it may, it's so substantially less demanding once you begin conveying all the more successfully. The profitable content thought isn't just about bragging your item's capacities and general worth or your organization's achievements. You should concentrate less on advertising how awesome your item is and rather concentrate on indicating how valuable it is. This is a client focused approach as it concentrates on their issues and your answer for them. Making yourself fundamental is critical.
-
-### Content is Imortant
-<div class="box">
-  <p>
-  In saying that, a one-measure fits-all approach won't do the trick with regards to content promoting. Rather, an emphasis on making remarkable, high caliber and totally genuine content that is engaging, helpful and fascinating for customers will get you the crown. From content, video and symbolism to infographics, studies, online courses and podcasts, whatever your favored content medium is, guarantee it is shareable and pertinent to your industry.
-  </p>
-</div>
-
-
-
-On social media, we may share our own thoughts and advance our image notwithstanding spreading musings for different associations and affiliations. With such a critical number of associations with people and relationship on social media, our experience can be over-burden with a considerable measure of information. -->
