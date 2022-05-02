@@ -3,6 +3,8 @@ layout: post
 title:  "SQL Server - Encrypting data in transit"
 date:   2022-04-27
 excerpt: "Data in transit from SQL Server to client is not encrypted by default. Let's see how we can fix this."
+tagline: "Recommended way to encrypt in transit data between SQL Server and client applications using TLS protocols."
+description: "My recommended approach to encrypting SQL data in transit. Comparing whether to turn on encryption at server end or client end."
 image: "/images/2022-04-27-1.jpg"
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Prem's Blog - About
-description: For the curious.. A bit about me
+description: For the curious.. A bit about Prem Radhakrishnan
 sitemap:
     priority: 0.7
     lastmod: 2022-04-29

@@ -4,16 +4,21 @@ bio:                "A blog for my notes so I don't have to rely on my awful mem
 description:        "A blog for my notes so I don't have to rely on my awful memory. Along the way I am hoping it also helps others."
 locale:             en_AU
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://premradhakrishnan.github.io/" # the base hostname & protocol for your site
 
 # Comments
-disqus_shortname:   default
+disqus_shortname:   premradhakrishnan-github-io
 
 # Social
 analytics-id:       "default"
 twitter:            radprem
 linkedin:           prem-radhakrishnan
 github:             premradhakrishnan
+
+#author
+author: 
+    twitter: radprem
+    name: Prem Radhakrishnan
 
 # personal
 location:           Coffs Harbour, AU
@@ -56,6 +61,7 @@ gems:
   - jekyll-feed
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-seo-tag
 
 paginate: 6
 paginate_path: "/blog/page:num/"
