@@ -23,10 +23,10 @@ sitemap:
 * Also love solving a-m-g-r-a-n-s-a (I mean anagrams)
 
 ### My Videos
-[![YouTube - Azure Real-time Analytics](file:///D:/Repos/Prem/blog/premradhakrishnan.github.io/images/video-real-time-analytics.jpg)](https://www.youtube.com/watch?v=j6vya4e6bBg "Azure Real-time Analytics")  
+[![YouTube - Azure Real-time Analytics](/images/video-real-time-analytics.jpg)](https://www.youtube.com/watch?v=j6vya4e6bBg "Azure Real-time Analytics")  
 <em>Figure: YoutTube | Azure Real-time Analytics</em>
 
-[![YouTube - Transform Your Power BI Dashboard](file:///D:/Repos/Prem/blog/premradhakrishnan.github.io/images/video-power-bi.jpg)](https://www.youtube.com/watch?v=eJ6uHwaGJRM "Transform Your Power BI Dashboard")  
+[![YouTube - Transform Your Power BI Dashboard](/images/video-power-bi.jpg)](https://www.youtube.com/watch?v=eJ6uHwaGJRM "Transform Your Power BI Dashboard")  
 <em>Figure: YoutTube | Transform Your Power BI Dashboard</em>
 
 ### Lines I like 
