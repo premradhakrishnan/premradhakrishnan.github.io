@@ -25,11 +25,15 @@ Let's look at a couple of examples to clarify this.
 
 Let's say you have a registry subkey HKEY_LOCAL_MACHINE\Software\MyCustomApp with key MyCustomKey, type REG_SZ, value=TRUE. In this case, the code you would normally use to read this subkey is: 
 
-`var subKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\MyCustomApp1");`
+```
+var subKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\MyCustomApp1");
+```
 
 However, if it is a 32-bit application running in a 64-bit OS, var subKey will return null. Instead you will need to append the path to the below.
 
-`var subKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\MyCustomApp1");`
+```
+var subKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\MyCustomApp1");
+```
 
 Alternatively, in the below code you can specify either RegistryView.Registry32 (for 32-bit) or RegistryView.Registry64 (for 64-bit) as the second parameter to get the right value .
 
