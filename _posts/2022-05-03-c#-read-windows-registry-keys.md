@@ -32,7 +32,7 @@ var subKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\MyCusto
 However, if it is a 32-bit application running in a 64-bit OS, var subKey will return null. Instead you will need to append the path to the below.
 
 ```
-var subKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\MyCustomApp1");
+subKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\MyCustomApp1");
 ```
 
 Alternatively, in the below code you can specify either RegistryView.Registry32 (for 32-bit) or RegistryView.Registry64 (for 64-bit) as the second parameter to get the right value .
