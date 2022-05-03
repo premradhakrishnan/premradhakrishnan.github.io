@@ -5,7 +5,7 @@ date:   2022-05-03
 excerpt: "Reading Windows registry keys using C# should be straight forward. Or is it?"
 tagline: "How to read Windows registry keys using C# for 32-bit and 64-bit applications."
 description: "There are some gotchas when trying to read registry keys in a 64-bit OS. While the Microsoft.Win32 librares are useful you still need to know where to look."
-image: "/images/2022-04-27-1.jpg"
+image: "/images/2022-05-03.jpg"
 ---
 
 ## How to read Windows registry keys using C#
