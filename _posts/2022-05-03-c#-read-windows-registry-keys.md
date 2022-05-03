@@ -9,13 +9,29 @@ image: "/images/2022-05-03.jpg"
 ---
 
 ## How to read Windows registry keys using C#
-While you can use Microsoft.Win32.Registry to read and write keys, sometimes you can get caught out. When a 32-bit application runs on a 64-bit OS, it will by default look at HKEY_LOCAL_MACHINE\Software\Wow6432Node. Let's look at a couple of examples to clarify this.
+While you can use Microsoft.Win32.Registry to read and write keys, sometimes you can get caught out. When a 32-bit application runs on a 64-bit OS, it will by default look at HKEY_LOCAL_MACHINE\Software\Wow6432Node. 
 
-Let's say you have a registry subkey HKEY_LOCAL_MACHINE\Software\MyCustomApp which has a key MyCustomKey of type REG_DWORD with a value of 1. In this case, You can use the below to read the subkey.
+### Wow6432Node Registry Key
+The below section is courtesy of the [Advanced Installer website](https://www.advancedinstaller.com/user-guide/registry-wow6432-node.html)
 
-`Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\MyCustomApp1")`
+> The Wow6432Node registry entry indicates that you are running a 64-bit Windows version.  
+>
+> The operating system uses this key to display a separate view of HKEY_LOCAL_MACHINE\SOFTWARE for 32-bit applications that run on 64-bit Windows versions. When a 32-bit application writes or reads a value under the HKEY_LOCAL_MACHINE\SOFTWARE\<company>\<product> subkey, the application reads from the HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\<company>\<product> subkey.  
+>
+> A registry reflector copies certain values between the 32-bit and 64-bit registry views (mainly for COM registration) and resolves any conflicts using a "last-writer-wins" approach.
 
-Now in another example, let's say the registry key is instead under HKEY_LOCAL_MACHINE\Software\Wow6432Node\MyCustomApp. In this case, you will have to specify the RegistryView.Registry32 to get the value.
+### Examples
+Let's look at a couple of examples to clarify this.
+
+Let's say you have a registry subkey HKEY_LOCAL_MACHINE\Software\MyCustomApp with key MyCustomKey, type REG_SZ, value=TRUE. In this case, the code you would normally use to read this subkey is: 
+
+`var subKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\MyCustomApp1");`
+
+However, if it is a 32-bit application running in a 64-bit OS, var subKey will return null. Instead you will need to append the path to the below.
+
+`var subKey = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\WOW6432Node\MyCustomApp1");`
+
+Alternatively, in the below code you can specify either RegistryView.Registry32 (for 32-bit) or RegistryView.Registry64 (for 64-bit) as the second parameter to get the right value .
 
 ```
 using (Microsoft.Win32.RegistryKey hklm32 = 
