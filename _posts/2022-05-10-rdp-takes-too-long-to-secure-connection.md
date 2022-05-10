@@ -2,7 +2,7 @@
 layout: post
 title:  "RDP taking too long to secure remote connection?"
 date:   2022-05-10
-excerpt: "Weird and wonderful fix that worked for me!"
+excerpt: "My remote desktop connections were taking too long to connect. Here's a weird and wonderful fix that worked for me!"
 tagline: "Are your RDP connections taking too long to secure a connection? Try out this simple fix and let me know if it helped!"
 description: "A quick fix to speed up your RDP connections."
 image: "/images/2022-05-10-1.jpg"
