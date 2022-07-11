@@ -23,7 +23,7 @@ So that's the why addressed. Let's look at how we do this.
 
 
 ### Why does SQL Server need an SSL or TLS certificate?
-SQL Server uses certificates for encryption. So much so that if one is not provided by us, SQL Server will create it's own self-signed certificate on start up. If we check the SQL Server logs on start up we will see a message similar to "A self-generated certificate was successfully loaded for encryption." if it's a self generated one. If we have assigned a certificate, the log entry will show that a certificate with thumbprint `xyz..` was loaded.
+SQL Server uses certificates for encryption. So much so that if one is not provided by us, SQL Server will create it's own self-signed certificate on start up - sometimes refered to as the "SQL Server Fallback certificate". If we check the SQL Server logs on start up we will see a message similar to "A self-generated certificate was successfully loaded for encryption." if it's a self generated one. If we have assigned a certificate, the log entry will show that a certificate with thumbprint `xyz..` was loaded.
 
 ### How to generate a valid certificate to assign to SQL Server
 The options available for a trusted certificate are many depending on the environment. 3 such options are:
@@ -32,7 +32,7 @@ Option A - Get a public SSL/TLS DNS certificate from GoDaddy or DigicertBased li
 
 Option B - If the server and client are hosted within a trusted AD environment, the IS team might already have trusted root certficates enabled and then we can just assign this to SQL Server. These certificates will only be trusted within the AD environment and non-domain joined client apps trying to connect will have to either import this cert into their trusted store or set the "TrustServerCertifcate" flag to true (not recommended as covered above)
 
-Option C - In dev we can create a self-signed certificate and import this into our trusted store. [This article](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver15#certificate-requirements) lists all the parameters needed us to generate a valid certificate.
+Option C - In dev we can create a self-signed certificate and import this into our trusted store. [This MS Docs article](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver15#certificate-requirements) lists all the parameters needed to generate a valid certificate.
 
 ### Once we have the right certificate
 
@@ -42,19 +42,20 @@ Option C - In dev we can create a self-signed certificate and import this into o
 ### How to assign the certificate to SQL Server
 There are 2 options to do this. 
 
-- Option A - Use the SQL Server Configuration Manager UI. Open Configuration Manager and right-click Properties on the Protocols option for your SQL Instance. In the "Certificate" tab, under the certificate dropdown you should see the certificate you generated in the earlier step above. Select this and restart your SQL Server Instance.
+- Option A - Use the SQL Server Configuration Manager UI. Open Configuration Manager and right-click Properties on the Protocols option for the SQL Instance. In the "Certificate" tab, under the certificate dropdown we should see the certificate generated in the earlier step. Select this and restart the SQL Server Instance.
 
-- Option B - Find your certificate's thumbprint and update the following Windows registry key with the thumbprint value and restart the SQL Server instance. By default, the certificate is located in the registry, at:
+- Option B - Find the certificate's thumbprint and update the following Windows registry key with the thumbprint value and restart the SQL Server instance. By default, the certificate is located in the registry, at:
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.x\MSSQLServer\SuperSocketNetLib`
 
 ### Done
 Once the above steps are completed and the instance restarted, SQL Server will use this certificate to encrypt TLS connections. We can verify that the certificate is working by connecting via SSMS and checking the "Encrypt connection" option and then using the below query:
 
 ```
-SELECT	    c.local_tcp_port, c.session_id, e.login_name, c.encrypt_option,
-            e.program_name, e.host_name, e.login_time, c.client_net_address 
-FROM	    sys.dm_exec_connections c
-INNER JOIN	sys.dm_exec_sessions e ON c.session_id = e.session_id
+SELECT	        c.local_tcp_port, c.session_id, e.login_name, c.encrypt_option,
+                e.program_name, e.host_name, e.login_time, c.client_net_address 
+
+FROM	        sys.dm_exec_connections c
+INNER JOIN	    sys.dm_exec_sessions e ON c.session_id = e.session_id
 ```
 
 ### Common Errors
