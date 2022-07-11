@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Certificates in SQL Server - DNS and Fallback certificates"
+title:  "TLS and Fallback Certificates in SQL Server"
 date:   2022-07-08
-excerpt: "TLS certificates for SQL Server will soon become increasingly common once developers start using newer Microsoft libraries. Here's how and why you should configure one."
+excerpt: "TLS certificates for SQL Server will become increasingly common once developers start using newer Microsoft libraries. Here's how and why you should configure one."
 tagline: "Steps to configure TLS certificates for your SQL Server"
 description: "A slightly longer post than I would like but I think it was warranted. Let's look at how and why we should be using certificates in SQL Server."
 image: "/images/2022-05-10-1.jpg"
