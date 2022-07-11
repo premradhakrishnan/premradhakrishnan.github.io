@@ -51,11 +51,11 @@ There are 2 options to do this.
 Once the above steps are completed and the instance restarted, SQL Server will use this certificate to encrypt TLS connections. We can verify that the certificate is working by connecting via SSMS and checking the "Encrypt connection" option and then using the below query:
 
 ```
-SELECT	        c.local_tcp_port, c.session_id, e.login_name, c.encrypt_option,
-                e.program_name, e.host_name, e.login_time, c.client_net_address 
+SELECT	            c.local_tcp_port, c.session_id, e.login_name, c.encrypt_option,
+                    e.program_name, e.host_name, e.login_time, c.client_net_address 
 
-FROM	        sys.dm_exec_connections c
-INNER JOIN	    sys.dm_exec_sessions e ON c.session_id = e.session_id
+FROM	            sys.dm_exec_connections c
+INNER JOIN	    sys.dm_exec_sessions    e           ON c.session_id = e.session_id
 ```
 
 ### Common Errors
