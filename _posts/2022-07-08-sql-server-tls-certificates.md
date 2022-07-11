@@ -9,15 +9,15 @@ image: "/images/2022-05-10-1.jpg"
 ---
 
 ### System.Data.SqlClient vs Microsoft.Data.SqlClient
-Before we jump in to how we do it, a quick minute to see why we need to. One reason is, a breaking change that happens when switching from `System.Data.SqlClient` to the newer `Microsoft.Data.SqlClient`. A not very well known fact is, by default communications between SQL Server and client applications are not encrypted. If you would like to encrypt this you need to specify additional flags in your connection strings to do this. Advanced Sql Server Management Studio (SSMS) users, will remember seeing this option in the `Login | Options` section.
+Before we jump in to how we do it, a quick minute to see why we need to. One reason is, a breaking change that happens when switching from `System.Data.SqlClient` to the newer `Microsoft.Data.SqlClient`. A not very well known fact is, by default communications between SQL Server and client applications are not encrypted. If you would like to encrypt this you need to specify additional flags in your connection strings to do this. Advanced Sql Server Management Studio (SSMS) users, will remember seeing the `Encrypt connection` option in the `Login | Options` section.
 
-In the `System.Data.SqlClient` library, this `Encrypt` flag in the connection string is set to `false` by default but this has switched to `true` in `Microsoft.Data.SqlClient`. This means that any client connecting to SQL Server will ask for an encrypted connection by default. At that point SQL Server will present to the client the certificate it will be using for the TLS connection. If the client does't trust this certificate that is presented, the connection will be terminated. To fix this we have 3 alternatives - 
+In the `System.Data.SqlClient` library, this `Encrypt` flag in the connection string is set to `false` by default but this has switched to `true` in `Microsoft.Data.SqlClient`. This means that any client connecting to SQL Server will ask for an encrypted connection by default. At this point, SQL Server will present to the client the certificate it will be using for the TLS connection. If the client doesn't trust this certificate that is presented, the connection will be terminated. To fix this we have 3 alternatives - 
 
 - Option A (recommended) - Set a valid cert on the SQL Server instance. How to instructions are covered further below.
 - Option B - Set the `Encrypt` flag back to false. This obviously has the same effect as using the older library but I guess it forces us to acknowledge that we realise the communication is not encrypted.
 - Option C - (not recommended) - Leave the `Encrypt` flag as is and add a `TrustServerCertificate=true` flag to the connection string. 
 
-Option C is not recommended in a prod environment as it means that any certificate presented to the client (including self-signed ones) will be trusted by the client. Therefore if we want to encrypt communications between SQL Server and client, the only viable alternative is to add a valid cert to SQL Server. 
+Option C is not recommended in a prod environment as it means that any certificate presented to the client (including self-signed ones) will be trusted by the client. Therefore if we want to encrypt communications between SQL Server and client, the only viable alternative is to add a valid cert to SQL Server. I have covered other options to consider in [another post earlier](https://premradhakrishnan.github.io/blog/sql-server-encrypting-data-in-transit/).
 
 So that's the why addressed. Let's look at how we do this.
 
