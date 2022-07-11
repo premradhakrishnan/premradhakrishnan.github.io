@@ -51,16 +51,17 @@ There are 2 options to do this.
 Once the above steps are completed and the instance restarted, SQL Server will use this certificate to encrypt TLS connections. We can verify that the certificate is working by connecting via SSMS and checking the "Encrypt connection" option and then using the below query:
 
 ```
-SELECT	c.local_tcp_port, c.session_id, e.login_name, c.encrypt_option,e.program_name, e.host_name, e.login_time, c.client_net_address 
-FROM	sys.dm_exec_connections c
+SELECT	    c.local_tcp_port, c.session_id, e.login_name, c.encrypt_option,
+            e.program_name, e.host_name, e.login_time, c.client_net_address 
+FROM	    sys.dm_exec_connections c
 INNER JOIN	sys.dm_exec_sessions e ON c.session_id = e.session_id
 ```
 
 ### Common Errors
 2 common error messages when using encrypted connections are - 
 
-1. "The target principal name is incorrect." - Check that your DNS certificate name matches your server name in this case.
-2. "The certificate chain was issued by an authority that is not trusted." - Windows doesn't trust the certificate that has been presented. Check that the certificate has been installed in the right place and that the chain of trust and the certificate authority hierarchy are preserved.
+1. `The target principal name is incorrect.` - Check that your DNS certificate name matches your server name in this case.
+2. `The certificate chain was issued by an authority that is not trusted.` - Windows doesn't trust the certificate that has been presented. Check that the certificate has been installed in the right place and that the chain of trust and the certificate authority hierarchy are preserved.
 
 <!-- ## Features
 ### Auto-Generating Sitemap
